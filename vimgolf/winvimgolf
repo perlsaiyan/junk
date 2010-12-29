@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Beat vimgolf.com challenges
+# code by Tom Allen (tom@nonserviam.net)
+# now on twitter @TheRealTomAllen :)
 
 VIMGOLF=/var/lib/gems/1.8/bin/vimgolf
 STRING="12345"
