@@ -3,9 +3,11 @@
 # Beat vimgolf.com challenges
 # code by Tom Allen (tom@nonserviam.net)
 # now on twitter @TheRealTomAllen :)
+# usage: winvimgolf <challenge id>
+
 
 VIMGOLF=/var/lib/gems/1.8/bin/vimgolf
-STRING="CHEATER"
+STRING="CHEATER" # edit this string to nothing shorter than 5 chars
 CID=$@
 VIMGOLFDIR=~/.vimgolf/put/
 
