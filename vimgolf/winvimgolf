@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Beat vimgolf.com challenges
+
+VIMGOLF=/var/lib/gems/1.8/bin/vimgolf
+STRING="12345"
+CID=$@
+VIMGOLFDIR=~/.vimgolf/put/
+
+rm ${VIMGOLFDIR}/${CID}*
+(
+sleep 3 ;
+OUTFILE=`find ${VIMGOLFDIR} -type f -iname \*${CID}\* | egrep -v '(.log|.output)$'` ;
+cp ${VIMGOLFDIR}/$CID.output ${OUTFILE}
+echo 12345 > ${VIMGOLFDIR}/${CID}.log
+) &
+${VIMGOLF} put ${CID}
+rm ${VIMGOLFDIR}/${CID}*
